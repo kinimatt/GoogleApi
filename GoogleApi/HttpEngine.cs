@@ -105,6 +105,8 @@ namespace GoogleApi
                 {
                     case Status.Ok:
                     case Status.ZeroResults:
+                    case Status.InvalidKey:
+                    case Status.OverQueryLimit:
                         return response;
 
                     default:
@@ -158,6 +160,8 @@ namespace GoogleApi
                             {
                                 case Status.Ok:
                                 case Status.ZeroResults:
+                                case Status.InvalidKey:
+                                case Status.OverQueryLimit:
                                     taskCompletion.SetResult(response);
                                     break;
 
